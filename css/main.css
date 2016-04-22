@@ -1,0 +1,302 @@
+html, body {padding: 0; margin: 0; font-family: 'Montserrat', Helvetica, Arial, sans-serif; color:black;height:100%; font-size:21px; overflow:hidden}
+  header{
+    top:0;
+    height:58px;
+    font-size: 0.5rem;
+    text-transform: uppercase;
+  	z-index:199;
+    color:white;
+    position: absolute;
+    width:100%;
+    box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.4);
+  }
+  #loader{
+    position: absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    z-index:999;
+  }
+  h1,h2,h3,h4,h5{
+    text-transform: uppercase;
+  }
+  ul{
+    margin:0;
+    padding:0;
+  }
+  #main-content{
+    position: absolute;
+    top:58px;
+    bottom:0;
+    left:0;
+    right:0;
+  }
+  #pagetitle{
+    margin:0;
+    padding:18px;
+  }
+  #select-country{
+    height:42px;
+    cursor: pointer;
+    color:black;
+    font-size: 0.6rem;
+  }
+  #tabs{
+    width: 220px;
+    height: 28px;
+    margin-right: 42px;
+    outline:2px solid grey;
+    position: relative;
+  }
+  .tab{
+    text-transform: uppercase;
+    height:100%;
+    font-size:0.6rem;
+    outline:1px solid grey;
+    cursor:pointer;
+    background-color: rgba(0,0,0,0.1);
+    position: relative;
+  }
+  .tab:after{
+    content: "";
+    display: block;
+    position: absolute;
+    -webkit-transition: height 0.25s ease;
+    transition: height 0.25s ease;
+    z-index: 0;
+    background-color: rgba(0,0,0,0.25);
+    bottom: 0;
+    left: 0;
+    height: 0;
+    width: 100%;
+  }
+  .tab:hover:after{
+    height:100%;
+  }
+  .slider-bar{
+    position: absolute;
+    height:5px;
+    background-color: #6dc9ca;
+    bottom:0;
+    left:0;
+    z-index:99;
+    transition: all 0.25s;
+    -webkit-transition: all 0.25s;
+    -ms-transition: all 0.25s;
+  }
+  #toolbar{
+    width:960px;
+    position: relative;
+    margin-top:20px;
+  }
+  #menubutton {
+    display: block;
+    height: 18px;
+    padding: 0px 15px;
+  }
+  .menu-item {
+    background: black;
+    display: block;
+    height: 3px;
+    border-radius: 3px;
+    margin: 0 0 4px;
+    width: 20px;
+  }
+  #pageicons:hover{
+    color: black;
+  }
+  .axis text {
+      font-family: sans-serif;
+      font-size: 11px;
+  }
+  .axis path,
+  .axis line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+  }
+  .line {
+    fill: none;
+    stroke-width: 1.5px;
+    transition: opacity 0.2s;
+    -webkit-transition: opacity 0.2s;
+    -ms-transition: opacity 0.2s;
+  }
+  div.tooltip { 
+    position: absolute;     
+    text-align: center;     
+    min-width: 60px;          
+    height: 12px;         
+    padding: 6px;       
+    font: 12px sans-serif;    
+    background: lightsteelblue; 
+    border: 0px;    
+    border-radius: 4px;     
+    pointer-events: none;     
+  }
+  .dropdown{
+    position: absolute;
+    min-width:200px;
+    height:342px;
+    right:8px;
+    top:2rem;
+    background: #33363B;
+    border-radius:5px;
+    display: none;
+    font-size:0.6rem;
+    cursor:auto;
+    z-index: 100;
+  }
+  .dropdown-content{
+    overflow-y:scroll;
+    height:292px;
+    position: relative;
+    padding:0 30px;
+  }
+  .dropdown-header{
+    padding:0 30px;
+    display:flex;
+    align-items:center;
+    height:50px;
+    color:rgba(255,255,255,0.6);
+    text-transform: uppercase;
+  }
+  .dropdown li{
+    height:40px;
+    border-top:1px solid rgba(255,255,255,0.2);
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-start;
+    text-decoration: none;
+  }
+  .dropdown a{
+    padding:0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    background: transparent;
+    width:100%;
+    cursor: pointer;
+  }
+  .dropdown a span {
+    padding:2px;
+  }
+  .dropdown a::selection {
+  background: rgb(64, 151, 119);
+  }
+  .dropdown a::-moz-selection {
+    background: rgb(64, 151, 119);
+  }
+  .dropdown a:hover,
+  .dropdown a:active {
+    background: #44484E;
+  }
+  .dropdown img{
+    width:12px;
+    margin:0 10px;
+    visibility: hidden;
+    max-width: 100%;
+    height: auto;
+  }
+  .dropdown:before{
+    content:'';
+    width:16px;
+    height:16px;
+    background: #33363B;
+    position: absolute;
+    right: 56px;
+    top: -8px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+  }
+  .dropdown li.selected a {
+    color:#33A9D9;
+  }
+  .dropdown li.selected img {
+    visibility: visible;
+  }
+  .dropdown a:hover {
+    background: #272a2d;
+  }
+  .dropdown a:active {
+    background: #272a2d;
+  }
+  .gradient-blue-green{
+    background: #6DC9CA;
+    background: -moz-linear-gradient(left, #6c878e 0%, #6dc9ca 50%, #96c768 100%);
+    background: -webkit-linear-gradient(left, #6c878e 0%, #6dc9ca 50%, #96c768 100%);
+    background: -o-linear-gradient(left, #6c878e 0%, #6dc9ca 50%, #96c768 100%);
+    background: -ms-linear-gradient(left, #6c878e 0%, #6dc9ca 50%, #96c768 100%);
+    background: linear, to right, #6c878e 0%, #6dc9ca 50%, #96c768 100%;
+  }
+
+  #search {
+    width: 10rem;
+  }
+  #search_text{
+      width: 100%;
+      padding: 6px 0 6px 20px;
+      font-size: 0.6rem;
+      border: 0 none;
+      margin-right: 0;
+      color: white;
+      outline: none;
+      background: transparent;
+      float: left;
+      box-sizing: border-box;
+      transition: all 0.15s;
+      border-radius: 2rem;
+      border: 2px solid #1f7f5c;
+  }
+  ::-webkit-input-placeholder { /* WebKit browsers */
+      color: white;
+  }
+  :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+      color: white;
+  }
+  ::-moz-placeholder { /* Mozilla Firefox 19+ */
+      color: white;
+  }
+  :-ms-input-placeholder { /* Internet Explorer 10+ */
+      color: white;
+  }
+  #search_text:focus {
+      background: rgb(64, 151, 119);
+  }
+  #search_button {
+      border: 0 none;
+      background: #1f7f5c url(../img/search.png) center no-repeat;
+      width: 60px;
+      float: left;
+      padding: 0;
+      text-align: center;
+      height: 52px;
+      cursor: pointer;
+  }
+
+
+
+  @media(max-width: 1124px) { /*comps and up*/
+    html{
+      font-size: 18px;
+    }
+  }
+  @media(max-width: 768px) { /*phablets*/
+    html{
+      font-size: 16px;
+    }
+  }
+  @media(max-width: 490px) { /*phones*/
+    html{
+      font-size: 13px;
+    }
+  }
+  @media(max-width: 400px) { /*tiny phones*/
+    html{
+      font-size: 10px;
+    }
+  }

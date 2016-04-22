@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <title>D3 Test</title>
+  <meta name="description" content="Creative Data Visualization">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>  
+
+  <link href='css/flexlayout.css' rel='stylesheet' type='text/css'>  
+  <link href='css/main.css' rel='stylesheet' type='text/css'>  
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+
+  <script src="http://d3js.org/d3.v3.min.js"></script>
+  <script type="text/javascript" src="js/jquery-2.2.2.min.js"></script> 
+  <script type="text/javascript" language="javascript" src="js/script.js"></script>
+    
+  </head>
+  <body>
+
+    <div id="loader" class="horizontal layout center center-justified gradient-blue-green">
+      <img src="img/spinner128.gif" />
+    </div>
+    
+    <header class="horizontal layout justified gradient-blue-green">
+      <h1 id="pagetitle">Global Youth Obesity, 1990-2013</h1>
+    </header>
+
+    <div id="main-content" class="vertical layout center start-justified">
+      <div id="toolbar" class="horizontal layout end-justified center">
+        <div id="tabs" class="horizontal layout"></div>
+        <div id="select-country" class="horizontal layout center">
+          <h2>Regions</h2>
+          <div id="menubutton"><div class="menu-item"></div><div class="menu-item"></div><div class="menu-item"></div></div>
+          <div class="dropdown">
+            <div class="dropdown-header horizontal layout justified">
+                <span>Select Regions:</span>
+                <div id="search">
+                  <input type="text" name="search_text" id="search_text" placeholder="Search"/>
+                </div>
+              </div>
+            <div class="dropdown-content">
+              <ul id="countries-dropdown">
+                <li class="selected" id="all">
+                  <a><img src="img/check.png" /><span>All</span></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>
